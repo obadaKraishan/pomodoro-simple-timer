@@ -1,16 +1,63 @@
 /* styles/main.css */
 
+/* General Dark Mode Styles */
 body.dark-mode {
     background-color: #1a202c;
     color: #cbd5e0;
 }
 
+/* Adjust the background of elements with white backgrounds in dark mode */
 .dark-mode .bg-white {
-    background-color: #2d3748;
-    color: #cbd5e0;
+    background-color: #2d3748; /* Darker background for containers */
+    color: #cbd5e0;            /* Light text color for contrast */
 }
 
 .dark-mode .bg-gray-100 {
     background-color: #1a202c;
+    color: #cbd5e0;
+}
+
+/* Ensure form inputs match the dark mode theme */
+.dark-mode input[type="number"],
+.dark-mode input[type="text"] {
+    background-color: #4a5568; /* Darker input background */
+    color: #cbd5e0;            /* Light text color */
+    border-color: #2d3748;      /* Darker border color */
+}
+
+/* Buttons should also adapt to dark mode */
+.dark-mode .bg-green-500 {
+    background-color: #38a169; /* Slightly darker green for dark mode */
+}
+
+.dark-mode .bg-yellow-500 {
+    background-color: #d69e2e; /* Slightly darker yellow for dark mode */
+}
+
+.dark-mode .bg-red-500 {
+    background-color: #e53e3e; /* Slightly darker red for dark mode */
+}
+
+/* Progress bar in dark mode */
+.dark-mode .bg-gray-300 {
+    background-color: #4a5568;  /* Darker background for the progress bar track */
+}
+
+.dark-mode .bg-blue-600 {
+    background-color: #3182ce;  /* Maintain bright blue for the progress bar itself */
+}
+
+/* Dark mode styling for session history and indicators */
+.dark-mode .bg-blue-600 {
+    background-color: #2c5282;  /* Darker blue for headers and footers */
+}
+
+.dark-mode .list-disc {
+    color: #cbd5e0; /* Ensure list bullets are visible in dark mode */
+}
+
+/* Ensure dark mode toggle button stands out */
+#dark-mode-toggle {
+    background-color: #2d3748; /* Darker toggle button background */
     color: #cbd5e0;
 }
