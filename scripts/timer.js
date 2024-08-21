@@ -133,6 +133,23 @@ function saveSettings() {
     localStorage.setItem('sessionsBeforeLongBreak', sessionsBeforeLongBreak);
 }
 
+function toggleDarkMode() {
+    isDarkMode = !isDarkMode;
+    document.body.classList.toggle('dark-mode', isDarkMode);
+    document.getElementById('timer-container').classList.toggle('bg-white', !isDarkMode);
+    document.getElementById('timer-container').classList.toggle('bg-gray-800', isDarkMode);
+    document.getElementById('history-container').classList.toggle('bg-white', !isDarkMode);
+    document.getElementById('history-container').classList.toggle('bg-gray-800', isDarkMode);
+    document.querySelectorAll('input').forEach(input => {
+        input.classList.toggle('bg-gray-100', !isDarkMode);
+        input.classList.toggle('bg-gray-700', isDarkMode);
+        input.classList.toggle('text-black', !isDarkMode);
+        input.classList.toggle('text-white', isDarkMode);
+    });
+    localStorage.setItem('isDarkMode', isDarkMode);
+}
+
+
 startButton.addEventListener('click', startTimer);
 pauseButton.addEventListener('click', pauseTimer);
 resetButton.addEventListener('click', resetTimer);

@@ -12,17 +12,24 @@ body.dark-mode {
     color: #cbd5e0;            /* Light text color for contrast */
 }
 
-.dark-mode .bg-gray-100 {
-    background-color: #1a202c;
+/* Ensure all background light colors are changed in dark mode */
+.dark-mode .bg-gray-100, 
+.dark-mode .bg-gray-200, 
+.dark-mode .bg-gray-300 {
+    background-color: #2d3748; /* Darker background for general elements */
     color: #cbd5e0;
 }
 
 /* Ensure form inputs match the dark mode theme */
 .dark-mode input[type="number"],
-.dark-mode input[type="text"] {
-    background-color: #4a5568; /* Darker input background */
+.dark-mode input[type="text"],
+.dark-mode input[type="password"],
+.dark-mode input[type="email"],
+.dark-mode textarea,
+.dark-mode select {
+    background-color: #2d3748; /* Darker input background */
     color: #cbd5e0;            /* Light text color */
-    border-color: #2d3748;      /* Darker border color */
+    border: 1px solid #4a5568; /* Border to separate from background */
 }
 
 /* Buttons should also adapt to dark mode */
@@ -60,4 +67,15 @@ body.dark-mode {
 #dark-mode-toggle {
     background-color: #2d3748; /* Darker toggle button background */
     color: #cbd5e0;
+}
+
+/* Dark mode for rounded containers and shadows */
+.dark-mode .rounded {
+    background-color: #2d3748; /* Darker background for rounded elements */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Darker shadows */
+}
+
+/* Dark mode for the container */
+.dark-mode .shadow-lg {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Enhanced shadow for dark mode */
 }
