@@ -1,0 +1,16 @@
+/* styles/main.css */
+
+body.dark-mode {
+    background-color: #1a202c;
+    color: #cbd5e0;
+}
+
+.dark-mode .bg-white {
+    background-color: #2d3748;
+    color: #cbd5e0;
+}
+
+.dark-mode .bg-gray-100 {
+    background-color: #1a202c;
+    color: #cbd5e0;
+}
